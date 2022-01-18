@@ -1,0 +1,1 @@
+INSERT INTO `product`(`product_id`, `product_category`, `product_name`, `product_describe`, `product_status`, `product_removed`, `product_1`, `product_2`, `product_3`, `product_4`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8],[value-9],[value-10])
