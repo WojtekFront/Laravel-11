@@ -15,8 +15,8 @@ Wersja W-FRONT 1.0 zalecamy odtwarzać na urządzeniach komputerowych.
 Aktualnie był używany na Google Chrome Version 97.0.4692.99 oraz Brave Version 1.34.80 Chromium.
 
 
-    2.1.Omówienie architektury:
-        2.1.1.Zakładka STRONA GŁÓWNA: 
+2.1.Omówienie architektury:
+            2.1.1.Zakładka STRONA GŁÓWNA: 
             - jest miejscem informacyjnym,
             - znajduje się tu opcja do zalogowania,
             - włączenia dokumentacji,
