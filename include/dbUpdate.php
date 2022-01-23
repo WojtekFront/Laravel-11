@@ -5,41 +5,52 @@ include 'dbValidation.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $productID = trim($_POST['productID']);
     $title = trim($_POST['productTitle']);
-    $describe = trim($_POST['productDescribe']);
+    $describe = $_POST['productDescribe'];
     $status = trim($_POST['productStatus']);
     $deleteProduct = trim($_POST['productEdit']);
 
 
     if (isstetData($title, $describe, $status)) {
-        echo "1.komunikat";
+        header("location:../editProduct.php?error=valueIncorrect");
+        exit();
     }
     if (isNotNull($title, $describe, $status)) {
-        echo "2.komunikat";
+        header("location:../editProduct.php?error=valueIncorrect");
+        exit();
     }
 
     if (correctTitle($title)) {
+        header("location:../editProduct.php?error=titleIncorrect");
+        exit();
+    }
 
-        echo "3.komunikat";
+
+    if (correctDescribe($describe)) {
+        header("location:../editProduct.php?error=desribeIncorrect");
+        exit();
     }
 
     if (correctStatus($status)) {
-
-        echo "4.komunikat";
+        header("location:../editProduct.php?error=statusIncorrect");
+        exit();
+    }
+    if(removeProduct($deleteProduct)){
+        header("location:../editProduct.php?error=removeIncorrect");
+        exit();
     }
 
     if (isset($conn)) {
-
-        $sqlInsert = "INSERT INTO product( `product_category`, `product_name`, `product_describe`, `product_status`, `product_removed`) 
-VALUES ('towary','$title','$describe','$status',1)";
-
         $sqlUpdate = "UPDATE product SET product_name='$title', product_describe='$describe', product_status='$status', product_removed='$deleteProduct'
         WHERE product_id='$productID'";
 
         mysqli_query($conn, $sqlUpdate);
-
+        // var_dump($describe);
         header("location:../productsList.php?edytowanoProdukt");
     } else {
-        echo "ostatni komunikat";
+        header("location:../editProduct.php?error=error1");
+        exit();
     }
 } else {
+    header("location:../editProduct.php?error=error2");
+        exit();
 }

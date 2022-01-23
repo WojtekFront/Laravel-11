@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -21,5 +24,14 @@
             <li>
                 <a href="editProduct.php"> Edycja</a>
             </li>
+            <li>
+                <?php
+                if (isset($_SESSION["userid"])) {
+                    echo '<li><a href ="include/admLogout.php">Wylogowanie</a></li>';
+                    echo "Jeseś zalogowany jako: " . $_SESSION["username"];
+                }
+                ?>
+            </li>
+
         </ul>
     </nav>

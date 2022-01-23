@@ -17,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($resultProducts = mysqli_query($conn, $sql)) {
 
             while ($row = mysqli_fetch_row($resultProducts)) {
+                var_dump($row[4]);
                 echo "
                 <form class='editPosition' method='POST' action='include/dbUpdate.php'>
     <table class='mainTable'>
@@ -33,21 +34,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <td>{$row[2]}</td>
             <td>{$row[3]}</td>
             <td>{$row[4]}</td>
-            <td>
+            
     </tr>
     <tr>
-            <td><input type='number' name='productID' value={$row[0]}></td>
-            <td><input type='text' name='productTitle' value={$row[2]}></td>
-            <td><input type='text' name='productDescribe' value={$row[3]}></td>
+            <td><input type='number' name='productID' value='{$row[0]}' readonly></td>
+            <td><input type='text' name='productTitle' value='{$row[2]}'></td>
+            <td><input type='text' name='productDescribe' value='{$row[3]}'></td> 
+          
             <td>
+            ";
+                if (strcmp($row[4], 'dostepny') == 0) {
+                    echo "
+            <select name='productStatus'>
+                <option value='dostepny' selected>dostępny</option>
+                <option value='niedostepny'>niedosępny</option>
+                </select>";
+                } else {
+                    echo "
             <select name='productStatus'>
                 <option value='dostepny'>dostępny</option>
-                <option value='niedostepny'>niedosępny</option>
-            </select></td>
+                <option value='niedostepny' selected>niedosępny</option>
+                </select>";
+                }
+                echo "  
+            </td>
             <td>
             <select name='productEdit'>
                 <option value='1'>edytuj</option>
-                <option style='color:red;' value='0'>usuń</option>
+                <option style='color:red;' value='2'>usuń</option>
             </select></td>
     </tr>
     <tr>

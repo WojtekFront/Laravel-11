@@ -1,21 +1,65 @@
 <?php
-function isstetData($title,$describe,$status){
-    if(isset($title) && isset($describe) && isset($status)){
-return false;}
-else{return true;}
-} 
-
-function isNotNull($title,$describe,$status){
-
-return false;
+function isstetData($title, $describe, $status)
+{
+    return (isset($title) && isset($describe) && isset($status)) ? false : true;
 }
 
-function correctTitle($title){
-
-    return false;
+function isNotNull($title, $describe, $status)
+{
+    return (!is_null($title) || !is_null($describe) || !is_null($status)) ? false : true;
 }
 
-function correctStatus($status){
+function correctTitle($title)
+{
+    $result;
+    $lenght = strlen($title);
+    if ($lenght < 2 || $lenght > 20) {
+        $result =  true;
+    } elseif (!preg_match("/^[a-zA-ZżźćńółęąśŻŹĆĄŚĘŁÓŃ0-9 ]*$/", $title)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
 
-    return false;
+function correctDescribe($describe)
+{
+    $result;
+    $lenght = strlen($describe);
+    if ($lenght < 5 || $lenght > 100) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
+
+function correctStatus($status)
+{
+    $result;
+    switch ($status) {
+        case 'niedostepny':
+        case 'dostepny':
+            $result = false;
+            break;
+        default:
+            $result = true;
+    }
+    return $result;
+}
+
+function removeProduct($deleteProduct)
+{
+    $result;
+    switch ($deleteProduct) {
+        case 1:
+        case 2:
+            $result = false;
+            break;
+        default:
+            $result = true;
+    }
+    return $result;
 }

@@ -8,20 +8,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $status = trim($_POST['productStatus']);
 
     if (isstetData($title, $describe, $status)) {
-        echo "1.komunikat";
+        header("location:../editProduct.php?error=valueIncorrect");
+        exit();
     }
     if (isNotNull($title, $describe, $status)) {
-        echo "2.komunikat";
+        header("location:../editProduct.php?error=valueIncorrect");
+        exit();
     }
 
     if (correctTitle($title)) {
+        header("location:../editProduct.php?error=titleIncorrect");
+        exit();
+    }
 
-        echo "3.komunikat";
+    if (correctDescribe($describe)) {
+        header("location:../editProduct.php?error=desribeIncorrect");
+        exit();
     }
 
     if (correctStatus($status)) {
-
-        echo "4.komunikat";
+        header("location:../editProduct.php?error=statusIncorrect");
+        exit();
     }
 
     if (isset($conn)) {
@@ -32,8 +39,12 @@ VALUES ('towary','$title','$describe','$status',1)";
         mysqli_query($conn, $sqlInsert);
 
         header("location:../productsList.php?dodanoNowyProdukt");
+        exit();
     } else {
-        echo "ostatni komunikat";
+        header("location:../editProduct.php?error=error3");
+        exit();
     }
 } else {
+    header("location:../editProduct.php?error=error4");
+    exit();
 }

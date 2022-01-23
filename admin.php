@@ -1,10 +1,8 @@
 <?php
 define('title', 'magazyn');
-include_once 'include/header.php';
+include_once 'include/incHeader.php';
 include_once 'include/dbConn.php';
 ?>
-
-
 
 
 <?php

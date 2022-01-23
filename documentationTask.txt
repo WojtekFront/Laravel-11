@@ -1,0 +1,28 @@
+zadania:
+
+Aktualne:
+- dodać logowanie;
+- walidacja zalogowania;
+- poprawić form o: require, ilość znaków;
+- gdy nie wyszuka produktu po ID brak komunikatu,
+- zaktualizować SQL
+
+
+
+Następne
+- poprawa wyglądu,
+. nadać wymiary tabeli,
+. komunikaty błódów w klorze,
+
+
+
+
+
+* JS dodawanie albo edycja produktów
+
+przetestować:
+- spacja do regex
+
+
+
+

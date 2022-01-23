@@ -4,16 +4,19 @@ include_once 'include/incHeader.php';
 include_once 'include/dbConn.php';
 ?>
 
-<table class="mainTable">
-    <tr>
-        <td>ID</td>
-        <td>Tytuł</td>
-        <td>Opis</td>
-        <td>Status</td>
 
-    </tr>
-    <?php
-    $sql = "SELECT*FROM product";
+<?php
+
+if (isset($_SESSION["userid"])) {
+    echo "<table class='mainTable'>
+<tr>
+    <td>ID</td>
+    <td>Tytuł</td>
+    <td>Opis</td>
+    <td>Status</td>
+
+</tr>";
+    $sql = "SELECT*FROM product WHERE product_removed=1";
     if ($resultProducts = mysqli_query($conn, $sql)) {
 
         while ($row = mysqli_fetch_row($resultProducts)) {
@@ -24,7 +27,10 @@ include_once 'include/dbConn.php';
         </tr>";
         }
     }
-    ?>
+} else {
+    echo "Zaloguj się, aby mieć możliwość wyświetlenia listy.";
+}
+?>
 
 </table><!-- close mainTable  -->
 
