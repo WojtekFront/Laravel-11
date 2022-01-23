@@ -1,0 +1,10 @@
+zadania:
+- poprawa walidacji,
+.walidacja usunięcia,
+- komunikaty błędów wyświetlane na stronie a nie tylko tytuł,
+- dodać logowanie;
+
+
+
+
+- poprawa wyglądu,
