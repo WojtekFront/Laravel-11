@@ -1,0 +1,13 @@
+
+CREATE TABLE `warehouse`.`product` ( 
+    `product_id` INT(100) NOT NULL AUTO_INCREMENT , 
+    `product_category` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL , 
+    `product_name` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL , 
+    `product_describe` TEXT CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL , 
+    `product_status` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL , 
+    `product_removed` INT(3) NOT NULL , 
+    `product_1` INT(2) NOT NULL , 
+    `product_2` INT(15) NOT NULL , 
+    `product_3` INT(15) NOT NULL , 
+    `product_4` INT(15) NOT NULL , 
+    PRIMARY KEY (`product_id`)) ENGINE = InnoDB;
