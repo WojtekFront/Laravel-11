@@ -16,22 +16,24 @@ session_start();
     <nav>
         <ul class="nav-links">
             <li>
-                <a href="index.php">Strona główna</a>
+                <a href="index.php">Panel</a>
             </li>
             <li>
                 <a href="productsList.php">Lista</a>
             </li>
             <li>
-                <a href="editProduct.php"> Edycja</a>
+                <a href="editProduct.php">Edycja</a>
             </li>
             <li>
+                <a href="admin.php">Instrukcja</a>
+            </li>
+            <li >
                 <?php
                 if (isset($_SESSION["userid"])) {
-                    echo '<li><a href ="include/admLogout.php">Wylogowanie</a></li>';
-                    echo "Jeseś zalogowany jako: " . $_SESSION["username"];
+                    echo '<a href ="include/admLogout.php">Wylogowanie</a><br>';
+                    echo '<div class="loginUser"> Użytkownik: ' . $_SESSION["username"]."</div>";
                 }
                 ?>
             </li>
-
         </ul>
     </nav>

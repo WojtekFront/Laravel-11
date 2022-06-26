@@ -10,10 +10,14 @@ include_once 'include/dbConn.php';
             <td>Tytuł</td>
             <td>Opis</td>
             <td>Status</td>
+            <!-- <td>Jednostka(W-F1.1)</td>
+            <td>Ilość(W-F1.1)</td>
+            <td>Cena(W-F1.1)</td>
+            <td>Stawka VAT(W-F1.1)</td> -->
         </tr>
 
         <td>
-            <?php
+            <?php //id pobierane na podstawie ostatnio dodanego produktu 
             $sql = "SELECT MAX(product_id) FROM product;";
             if ($resultProducts = mysqli_query($conn, $sql)) {
 
@@ -22,7 +26,7 @@ include_once 'include/dbConn.php';
                 }
             }
             ?>
-        </td> <!-- id pobierane na podstawie ostatnio dodanego produktu -->
+        </td> 
         <td>
             <input type='text' name='productTitle'>
         </td>

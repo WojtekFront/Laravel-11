@@ -11,14 +11,15 @@ include_once 'include/dbConn.php';
     <h2>program magazynowy posiada następujące opcje:</h3>
         <h3>
             <ul>
-                <li>dodawanie towarów,</li>
-                <li>odjemowanie towarów,</li>
-                <li>edycja towarów,</li>
-                <li>wyświetlanie towarów</li>
+                <li>- dodawanie towarów,</li>
+                <li>- odjemowanie towarów,</li>
+                <li>- edycja towarów,</li>
+                <li>- wyświetlanie towarów</li>
 
             </ul>
 </div>
 <!-- logowanie -->
+<?php if(!isset($_SESSION["username"])){ ?>
 <section>
     <!-- otwórz div zaloguj sie -->
     <div>
@@ -36,7 +37,7 @@ include_once 'include/dbConn.php';
         <!--zamknij div zaloguj się -->
     </div>
     <?php
-
+}
     if (isset($_GET["error"])) {
         if ($_GET["error"] == "emtyLogField") {
             echo "<p>Uzupełnij wszystkie dane</p>";

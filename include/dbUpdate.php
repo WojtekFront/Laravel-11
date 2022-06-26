@@ -14,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("location:../editProduct.php?error=valueIncorrect");
         exit();
     }
+    
     if (isNotNull($title, $describe, $status)) {
         header("location:../editProduct.php?error=valueIncorrect");
         exit();
@@ -24,7 +25,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 
-
     if (correctDescribe($describe)) {
         header("location:../editProduct.php?error=desribeIncorrect");
         exit();
@@ -34,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("location:../editProduct.php?error=statusIncorrect");
         exit();
     }
+
     if(removeProduct($deleteProduct)){
         header("location:../editProduct.php?error=removeIncorrect");
         exit();

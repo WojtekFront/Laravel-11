@@ -1,7 +1,7 @@
 <h3>Edycja oraz usuwanie produktu</h3><br>
 Podaj ID produktu do edycji:
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method='post'>
-    <input type='number' name='productId'>
+    <input type='number' name='productId'> <!-- tutaj mają się pokazywać tylko id produktu z SQL z wartością 1  -->
     <input type='submit' name='Wyszukaj' value='Wyszukaj'>
 </form>
 

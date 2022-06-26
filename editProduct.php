@@ -2,8 +2,7 @@
 define('title', 'magazyn');
 include_once 'include/incHeader.php';
 include_once 'include/dbConn.php';
-?>
-  <?php
+
     if (isset($_SESSION["userid"])) {
 
 
@@ -24,7 +23,6 @@ include_once 'include/dbConn.php';
     } else {
         echo "Zaloguj się, aby mieć możliwość edycji panelu.";
     }
-    ?>
-<?php
+
 include_once 'include/incFooter.php';
 ?>
