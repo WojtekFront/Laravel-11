@@ -15,9 +15,10 @@ if (isset($_POST['submit'])) {
     if (emptyInputLogin($userIn, $passwordIn) == !false) {
         header("location:../index.php?error=emtyLogField");
         exit();
-    }
+    }else{ 
 
     loginUser($conn, $userIn, $passwordIn);
+   }
 }else{
     header("location:../index.php?error=emtyLogField");
         exit();

@@ -97,46 +97,32 @@ function loginUser($conn, $userIn, $passwordIn)
 {
     
 
-    $uidExists = uidExists($conn, $userIn, $userIn); //passwordIn
+    $uidExists = uidExists($conn, $userIn, $userIn); 
 
 
-
+    $hash;
 
     $sql = "SELECT user_pwd FROM users WHERE user_name='$userIn'";
         if ($resultPass = mysqli_query($conn, $sql)) {
 
             while ($row = mysqli_fetch_row($resultPass)) {
                 //var_dump($row[4]);
-                header("location:../index.php?error={$row[3]}");
-        exit();
+              $hash=  $row[0];
             }}
-
-
-
-
-
-    if ($uidExists === false) {
-        header("location:../index.php?error=wrongPassword");
-        exit();
-    }
-
-    $pwdHashed = $uidExists["user_PWD"];
-    $pwdHashed=11;
-    header("location: ../index.php?error={$pwdHashed}");
-        exit();
-    
-
-    $checkPwd = password_verify($passwordIn, $pwdHashed);
+    $checkPwd = password_verify($passwordIn, $hash);
 
     if ($checkPwd == false) {
         header("location: ../index.php?error=wrongPassword");
         exit();
     }
-    if ($chceckePwd = true) {
+    elseif ($checkPwd == true) {
         session_start();
         $_SESSION["userid"] = $uidExists["users_id"];
         $_SESSION["username"] = $uidExists["user_name"];
-        header("location: ../index.php?error=newError");
+        header("location: ../index.php?correctLogin");
+        exit();
+    }else{
+        header("location: ../index.php?error=last");
         exit();
     }
 }
