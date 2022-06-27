@@ -1,8 +1,22 @@
 <h3>Edycja oraz usuwanie produktu</h3><br>
 Podaj ID produktu do edycji:
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method='post'>
-    <input type='number' name='productId'> <!-- tutaj mają się pokazywać tylko id produktu z SQL z wartością 1  -->
-    <input type='submit' name='Wyszukaj' value='Wyszukaj'>
+    <!-- <input type='number' name='productId'> tutaj mają się pokazywać tylko id produktu z SQL z wartością 1  -->
+    <select name="productId">
+ 
+ <?php
+    $sql = "SELECT*FROM product WHERE product_removed=1";
+    if ($resultProducts = mysqli_query($conn, $sql)) {
+
+        while ($row = mysqli_fetch_row($resultProducts)) {
+            echo "<option value={$row[0]}>
+        {$row[0]} / 
+        {$row[2]} /  
+        {$row[3]}
+        </option>";
+        }}?> 
+    </select>
+    <input type="submit" name="Wyszukaj" value="Wyszukaj">
 </form>
 
 
@@ -66,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </tr>
     <tr>
     <td></td>
-    <td><input type='submit' name='Zatwierdź' value='Zatwierdź'></td>
+    <td><input type='submit' name='Zatwierdź' value='Zatwierdź'></td> <!-- zmien 'Zatwierdź' -->
     </tr>
     </table><!-- close mainTable  -->
     </form>";

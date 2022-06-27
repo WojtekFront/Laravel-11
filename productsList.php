@@ -8,14 +8,16 @@ include_once 'include/dbConn.php';
 <?php
 
 if (isset($_SESSION["userid"])) {
-    echo "<table class='mainTable'>
+    echo "<table class='mainTableList'>
+    <thead>
 <tr>
-    <td>ID</td>
-    <td>Tytuł</td>
-    <td>Opis</td>
-    <td>Status</td>
-
-</tr>";
+    <th class='widthMainTableListId'>ID</th>
+    <th class='widthMainTableListName'>Tytuł</th>
+    <th class='widthMainTableListOpis'>Opis</th>
+    <th class='widthMainTableListStatus'>Status</th>
+</tr>
+</thead>
+<tbody>";
     $sql = "SELECT*FROM product WHERE product_removed=1";
     if ($resultProducts = mysqli_query($conn, $sql)) {
 
@@ -31,7 +33,7 @@ if (isset($_SESSION["userid"])) {
     echo "Zaloguj się, aby mieć możliwość wyświetlenia listy.";
 }
 ?>
-
+</tbody>
 </table><!-- close mainTable  -->
 
 

@@ -1,27 +1,32 @@
 zadania:
 
 Aktualne(ważne/pilne) W-FRONT 1.0: 
-- gdy nie wyszuka produktu po ID brak komunikatu, 9/9 (edycja > Edycja oraz usuwanie produktu)
-. lista tylko z produktami productEdit.php 
-. lista pokazuje na pierwszy produkt 
-- walidacja hasła zalogowania - aktualnie przepuszcza bez danych;
 
+- walidacja hasła zalogowania - aktualnie przepuszcza bez danych;
 
 
 
 Następne W-FRONT 1.1:
 - dodanie nowych parametrów dla towarów
 . Jednostka
-. Ilość	
-. Cena	
+. EAN
+. Ilość
+. Cena
 . Stawka VAT
+- po dodaniu produktu komentarz o dodaniu a nie przeniesienie na stronę
+- w "productEdit" zmień "zatwierdź"
+* aktualizacja instrukcji o opcje
+
 
 
 Następne W-FRONT 2:
 - nowy wygląd karty
 - dodanie dokumentu PZ - pobierając ID ale nie powiązanych ze stanami
 - dodanie dokumentu WZ, RW - pobierając ID ale nie powiązanych ze stanami
-- poprawić nawbar na hamburger; (8/5);
+- nawbar 
+. na hamburger; (8/5);
+. rozbicie pól po drzewku
+
 
 Następna wersja 3:
 - sortowanie po lista towarów;
@@ -29,12 +34,22 @@ Następna wersja 3:
 - eksport danych do pliku CSV oraz możliwość importu
 - dodanie dziennika zdarzeń;
 - dodanie notatnika;
+- lista jeżeli opis albo nazwa są dłuższe niż "X" znaków to pokazuj "..."
 
 Następna wersja 4:
-- administracja
+- administracja,
+- wyszukiwanie produktów po innym parametrze niż ID
+. przemyślenie działania aby ograniczyć ilość wyświetlanych pozycji
+- powiązanie PZ z dokumentami magazynowymi
+- dodawanie zdjęć do produktów
+
+Następna wersja 5:
+- tworzenie wydruków;
+- pobieranie kursów walut;
 
 
-
+Następna wersja 6:
+- udostępnienie na stronie
 
 
 

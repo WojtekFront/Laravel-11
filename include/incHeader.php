@@ -36,4 +36,5 @@ session_start();
                 ?>
             </li>
         </ul>
+        <br><br>
     </nav>

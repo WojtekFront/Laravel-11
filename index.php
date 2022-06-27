@@ -29,7 +29,7 @@ include_once 'include/dbConn.php';
             <label for="logIn">Podaj login lub e-mail:</label>
             <input type="text" id="logIn" name="logIn" placeholder="login / e-mail" value="admin"></br>
             <label for="passwordIn">Podaj hasło:</label>
-            <input type="password" id="passwordIn" name="passwordIn" placeholder="hasło" value="admin"></br>
+            <input type="password" id="passwordIn" name="passwordIn" placeholder="hasło" value="adffmin"></br>
 
             <button type="submit" name="submit">Zaloguj</button></br></br>
         </form>

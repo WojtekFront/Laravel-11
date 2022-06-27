@@ -95,7 +95,25 @@ function emptyInPutLogin($userIn, $passwordIn)
 
 function loginUser($conn, $userIn, $passwordIn)
 {
-    $uidExists = uidExists($conn, $userIn, $userIn);
+    
+
+    $uidExists = uidExists($conn, $userIn, $userIn); //passwordIn
+
+
+
+
+    $sql = "SELECT user_pwd FROM users WHERE user_name='$userIn'";
+        if ($resultPass = mysqli_query($conn, $sql)) {
+
+            while ($row = mysqli_fetch_row($resultPass)) {
+                //var_dump($row[4]);
+                header("location:../index.php?error={$row[3]}");
+        exit();
+            }}
+
+
+
+
 
     if ($uidExists === false) {
         header("location:../index.php?error=wrongPassword");
@@ -103,9 +121,14 @@ function loginUser($conn, $userIn, $passwordIn)
     }
 
     $pwdHashed = $uidExists["user_PWD"];
+    $pwdHashed=11;
+    header("location: ../index.php?error={$pwdHashed}");
+        exit();
+    
+
     $checkPwd = password_verify($passwordIn, $pwdHashed);
 
-    if ($checkPwd = false) {
+    if ($checkPwd == false) {
         header("location: ../index.php?error=wrongPassword");
         exit();
     }
@@ -117,3 +140,4 @@ function loginUser($conn, $userIn, $passwordIn)
         exit();
     }
 }
+

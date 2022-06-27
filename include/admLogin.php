@@ -1,8 +1,12 @@
 <?php
-if (isset($_POST["submit"])) {
+
+
+
+
+if (isset($_POST['submit'])) {
     $userIn = $_POST['logIn'];
     $passwordIn = $_POST['passwordIn'];
-
+   
     //dodać walidację
 
     require_once 'dbConn.php';
@@ -14,4 +18,7 @@ if (isset($_POST["submit"])) {
     }
 
     loginUser($conn, $userIn, $passwordIn);
+}else{
+    header("location:../index.php?error=emtyLogField");
+        exit();
 }
