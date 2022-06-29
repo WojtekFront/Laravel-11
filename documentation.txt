@@ -25,4 +25,6 @@ Aktualnie był używany na Google Chrome Version 97.0.4692.99 oraz Brave Version
               id jest możliwe w edycji,
         2.1.3 Zakładka edycja:
             - umożliwia dodawanie produktów,
-            - umożliwia edycję produktów
+            - umożliwia edycję produktów na podstawie istniejących
+        2.1.4 Zakładka instrukcja:
+            - instrukcja działania zakładek
