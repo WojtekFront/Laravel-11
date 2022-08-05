@@ -19,45 +19,43 @@ include_once 'include/dbConn.php';
             </ul>
 </div>
 <!-- logowanie -->
-<?php if(!isset($_SESSION["username"])){ ?>
-<section>
-    <!-- otwórz div zaloguj sie -->
-    <div>
-        </br></br>
-        <h2>FORMULARZ LOGOWANIA:</h2>
-        <form action="include/admLogin.php" method="post">
-            <label for="logIn">Podaj login lub e-mail:</label>
-            <input type="text" id="logIn" name="logIn" placeholder="login / e-mail" value="admin"></br>
-            <label for="passwordIn">Podaj hasło:</label>
-            <input type="password" id="passwordIn" name="passwordIn" placeholder="hasło" value="adffmin"></br>
+<?php if (!isset($_SESSION["username"])) { ?>
+    <section>
+        <!-- open loginForm -->
+        <div class="loginForm">
+            </br></br>
+            <h2>FORMULARZ LOGOWANIA:</h2>
+            <form action="include/admLogin.php" method="post">
+                <label for="logIn">Podaj login lub e-mail:</label>
+                <input type="text" id="logIn" name="logIn" placeholder="login / e-mail" value="admin"></br>
+                <label for="passwordIn">Podaj hasło:</label>
+                <input type="password" id="passwordIn" name="passwordIn" placeholder="hasło" value="adffmin"></br>
+                <button type="submit" name="submit">Zaloguj</button></br></br>
+            </form>
+            <div class="register">
+                <a href="rejestracja.php">Rejestracja</a>
+            </div>
+        </div>
+        <!--close loginForm -->
+        </div>
 
-            <button type="submit" name="submit">Zaloguj</button></br></br>
-        </form>
-        <a href="rejestracja.php">Rejestracja</a>
-        <!--zamknij div zaloguj się -->
-    </div>
     <?php
 }
-    if (isset($_GET["error"])) {
-        if ($_GET["error"] == "emtyLogField") {
-            echo "<p>Uzupełnij wszystkie dane</p>";
-        } else if ($_GET["error"] == "wrongPassword") {
-            echo "<p> Niepoprawne dane do logowania";
-        } else if ($_GET["error"] == "3") {
-            echo "<p> </p>";
-        } else if ($_GET["error"] == "3") {
-            echo "<p> </p>";
-        }
+// error info from ???
+if (isset($_GET["error"])) {
+    if ($_GET["error"] == "emtyLogField") {
+        echo "<p>Uzupełnij wszystkie dane</p>";
+    } else if ($_GET["error"] == "wrongPassword") {
+        echo "<p> Niepoprawne dane do logowania";
+    } else if ($_GET["error"] == "3") {
+        echo "<p> </p>";
+    } else if ($_GET["error"] == "3") {
+        echo "<p> </p>";
     }
+}
 
     ?>
-</section>
-<!-- zamknięcie logowania -->
-
-
-
-
-
-<?php
-include_once 'include/incFooter.php';
-?>
+    </section>
+    <?php
+    include_once 'include/incFooter.php';
+    ?>
