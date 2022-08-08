@@ -15,9 +15,11 @@ session_start();
 </head>
 
 <body>
-    
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
@@ -44,16 +46,16 @@ session_start();
                         <a class="dropdown-item" href="admin.php">Instrukcja</a>
                     </div>
                 </li>
-                
-                
+
+
             </ul>
             <div class="my-2 mr-sm-2">
-            <?php
-                    if (isset($_SESSION["userid"])) {
-                        echo '<a href ="include/admLogout.php">Wylogowanie</a><br>';
-                        echo '<div class="loginUser"> Użytkownik: ' . $_SESSION["username"] . "</div>";
-                    }
-                    ?>
+                <?php
+                if (isset($_SESSION["userid"])) {
+                    echo '<a href ="include/admLogout.php">Wylogowanie</a><br>';
+                    echo '<div class="loginUser"> Użytkownik: ' . $_SESSION["username"] . "</div>";
+                }
+                ?>
             </div>
 
         </div>
