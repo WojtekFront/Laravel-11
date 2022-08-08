@@ -32,8 +32,8 @@ session_start();
                         TOWARY
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="editProduct.php">edycja</a>
-                        <a class="dropdown-item" href="editProduct.php">dodawanie</a>
+                        <a class="dropdown-item" href="editProduct.php">edycja</a> <!-- shows the same place -->
+                        <a class="dropdown-item" href="editProduct.php">dodawanie</a> <!-- shows the same place -->
                     </div>
                 </li>
                 <li class="nav-item dropdown">

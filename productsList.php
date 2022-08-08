@@ -8,7 +8,7 @@ include_once 'include/dbConn.php';
 <?php
 
 if (isset($_SESSION["userid"])) {
-    echo "<table class='mainTableList'>
+    echo "<table class='mainTableList table table-hover table-dark'>
     <thead>
 <tr>
     <th class='widthMainTableListId'>ID</th>
