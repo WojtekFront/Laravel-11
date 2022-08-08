@@ -15,28 +15,47 @@ session_start();
 </head>
 
 <body>
-    <nav>
-        <ul class="nav-links">
-            <li>
-                <a href="index.php">Panel</a>
-            </li>
-            <li>
-                <a href="productsList.php">Lista</a>
-            </li>
-            <li>
-                <a href="editProduct.php">Edycja</a>
-            </li>
-            <li>
-                <a href="admin.php">Instrukcja</a>
-            </li>
-            <li >
-                <?php
-                if (isset($_SESSION["userid"])) {
-                    echo '<a href ="include/admLogout.php">Wylogowanie</a><br>';
-                    echo '<div class="loginUser"> Użytkownik: ' . $_SESSION["username"]."</div>";
-                }
-                ?>
-            </li>
-        </ul>
-        <br><br>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.php">PANEL</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="productsList.php">LISTA</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        TOWARY
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="editProduct.php">edycja</a> <!-- shows the same place -->
+                        <a class="dropdown-item" href="editProduct.php">dodawanie</a> <!-- shows the same place -->
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        POMOC
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="admin.php">Instrukcja</a>
+                    </div>
+                </li>
+                
+                
+            </ul>
+            <div class="my-2 mr-sm-2">
+            <?php
+                    if (isset($_SESSION["userid"])) {
+                        echo '<a href ="include/admLogout.php">Wylogowanie</a><br>';
+                        echo '<div class="loginUser"> Użytkownik: ' . $_SESSION["username"] . "</div>";
+                    }
+                    ?>
+            </div>
+
+        </div>
+
     </nav>

@@ -7,37 +7,56 @@ include_once 'include/dbConn.php';
 
 <!-- tekst powitalny -->
 <div>
-    <h1>Program do zarządzania towarami <b>W-FRONT 1.0</b></h1>
-    <h2>program magazynowy posiada następujące opcje:</h3>
-        <h3>
-            <ul>
-                <li>- dodawanie towarów,</li>
-                <li>- odjemowanie towarów,</li>
-                <li>- edycja towarów,</li>
-                <li>- wyświetlanie towarów</li>
+    <h3>Program do zarządzania towarami <b>W-FRONT 1.0</b></h3>
+    <h4>program magazynowy posiada następujące opcje:</h4>
+    <ul>
+        <li> dodawanie towarów,</li>
+        <li> odjemowanie towarów,</li>
+        <li> edycja towarów,</li>
+        <li> wyświetlanie towarów</li>
 
-            </ul>
+    </ul>
 </div>
 <!-- logowanie -->
 <?php if (!isset($_SESSION["username"])) { ?>
     <section>
         <!-- open loginForm -->
+
         <div class="loginForm">
             </br></br>
-            <h2>FORMULARZ LOGOWANIA:</h2>
+            <h3>FORMULARZ LOGOWANIA:</h3>
+
+
+
+
             <form action="include/admLogin.php" method="post">
-                <label for="logIn">Podaj login lub e-mail:</label>
-                <input type="text" id="logIn" name="logIn" placeholder="login / e-mail" value="admin"></br>
-                <label for="passwordIn">Podaj hasło:</label>
-                <input type="password" id="passwordIn" name="passwordIn" placeholder="hasło" value="adffmin"></br>
-                <button type="submit" name="submit">Zaloguj</button></br></br>
+                <div class="form-group">
+                    <label for="logIn">Podaj login lub e-mail:</label><br>
+                    <input type="text" class="col-md-2 mb-3" id="logIn" name="logIn" aria-describedby="emailHelp" placeholder="login / e-mail">
+                </div>
+
+
+
+
+
+                <div class="form-group">
+                    <label class="sr-only" for="passwordIn">Podaj hasło:</label><br>
+                    <input type="password" class="col-md-2 mb-3" id="passwordIn" name="passwordIn" placeholder="hasło">
+                </div>
+                <button type="submit" name="submit" class="btn btn-dark mb-3">Zaloguj</button>
             </form>
-            <div class="register">
+            <br>
+            <div class="btn btn-dark mb-2">
                 <a href="rejestracja.php">Rejestracja</a>
             </div>
         </div>
+
+
         <!--close loginForm -->
-        </div>
+
+
+
+
 
     <?php
 }

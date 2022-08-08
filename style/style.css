@@ -18,32 +18,10 @@ body {
   font-family: "Calibri", Serif;
 }
 
-.nav {
-  background-color: #ecebeb;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 10vh;
-  width: 100%;
-  align-items: center;
-}
 
-.nav-links {
-  display: flex;
-  justify-content: space-around;
-  width: 40%;
-}
-
-.nav-links li {
-  list-style: none;
-  width: 350px;
-}
-
-.nav-links a {
-  text-transform: uppercase;
+a:link, a:visited, a:active{
   text-decoration: none;
-  font-weight: bold;
-  color: #272626;
+  color: #fff !important;
 }
 
 .loginUser{
@@ -58,29 +36,7 @@ font-size: 12px;
   word-break: break-all;
 }
 
-.mainTableList thead{
-  background-color:#dbd3d3;
-}
 
-.mainTableList thead tr th,.mainTableList tbody tr td{
-  border: 1px solid black;
-}
-
-.mainTableList thead tr .widthMainTableListId{
-  width: 70px;
-}
-
-.mainTableList thead tr .widthMainTableListName{
-  width: 200px;
-}
-
-.mainTableList thead tr .widthMainTableListOpis{
-  min-width: 400px;
-}
-
-.mainTableList thead tr .widthMainTableListStatus{
-  width: 200px;
-}
 
 /* ---------- close mainTableList ----------*/
 
