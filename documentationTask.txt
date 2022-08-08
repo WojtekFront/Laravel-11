@@ -15,7 +15,10 @@ Następne W-FRONT 1.1:
 . Stawka VAT
 - po dodaniu produktu komentarz o dodaniu a nie przeniesienie na stronę
 - w "productEdit" zmień "zatwierdź"
+! nazwa strony czy jest przekazywana w górnym pasku
+! rozbicie na dodawanie i usuwanie towaru
 * aktualizacja instrukcji o opcje
+
 
 
 
@@ -24,7 +27,7 @@ Następne W-FRONT 2:
 - dodanie dokumentu PZ - pobierając ID ale nie powiązanych ze stanami
 - dodanie dokumentu WZ, RW - pobierając ID ale nie powiązanych ze stanami
 - nawbar 
-. na hamburger; (8/5);
+. na hamburger; (8/5); // wykonane bootstrap
 . rozbicie pól po drzewku
 
 
