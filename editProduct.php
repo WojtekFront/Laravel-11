@@ -6,11 +6,7 @@ include_once 'include/dbConn.php';
     if (isset($_SESSION["userid"])) {
 
 
-        // <div id="addProduct">
-
-        include_once 'include/productAdd.php';
-
-        // </div>
+  
 
         // <div id="removeProduct">
 

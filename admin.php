@@ -9,7 +9,7 @@ include_once 'include/dbConn.php';
 
 Użytkownicy: -->
 
-Wersja W-FRONT 1.0 jest stale rozbudowaną strukturą. <br>
+Wersja W-FRONT 1.1 jest stale rozbudowaną strukturą. <br>
 W tej zakładce od wersji 4.0 będzie możlowość ustawienia własnej konfiguracji:<br>
 <br>
 <br>

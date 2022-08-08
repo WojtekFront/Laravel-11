@@ -7,7 +7,7 @@ include_once 'include/dbConn.php';
 
 <!-- tekst powitalny -->
 <div>
-    <h3>Program do zarządzania towarami <b>W-FRONT 1.0</b></h3>
+    <h3>Program do zarządzania towarami <b>W-FRONT 1.1</b></h3>
     <h4>program magazynowy posiada następujące opcje:</h4>
     <ul>
         <li> dodawanie towarów,</li>

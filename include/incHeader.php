@@ -14,15 +14,16 @@ session_start();
 
 </head>
 
-<body>
-    
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<body class="card text-white bg-dark mb-3">
 
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php">PANEL</a>
+                    <a class="nav-link navbar-text" href="index.php">PANEL</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="productsList.php">LISTA</a>
@@ -32,8 +33,8 @@ session_start();
                         TOWARY
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="editProduct.php">edycja</a> <!-- shows the same place -->
-                        <a class="dropdown-item" href="editProduct.php">dodawanie</a> <!-- shows the same place -->
+                        <a class="dropdown-item" href="editProduct.php">edycja</a>
+                        <a class="dropdown-item" href="addProduct.php">dodawanie</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -44,18 +45,21 @@ session_start();
                         <a class="dropdown-item" href="admin.php">Instrukcja</a>
                     </div>
                 </li>
-                
-                
+
+
+
+<li>
+                <?php
+                if (isset($_SESSION["userid"])) {
+                    echo '<li class="nav-item"><a  class="nav-link" href ="include/admLogout.php">Wylogowanie</a><br>';
+                    echo '<div class="text-secondary"> Użytkownik: ' . $_SESSION["username"] . "</div></li>";
+                }
+                ?> 
+</li>
             </ul>
-            <div class="my-2 mr-sm-2">
-            <?php
-                    if (isset($_SESSION["userid"])) {
-                        echo '<a href ="include/admLogout.php">Wylogowanie</a><br>';
-                        echo '<div class="loginUser"> Użytkownik: ' . $_SESSION["username"] . "</div>";
-                    }
-                    ?>
-            </div>
 
         </div>
 
     </nav>
+
+   
