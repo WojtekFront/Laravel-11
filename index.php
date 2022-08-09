@@ -25,20 +25,11 @@ include_once 'include/dbConn.php';
         <div class="loginForm">
             </br></br>
             <h3>FORMULARZ LOGOWANIA:</h3>
-
-
-
-
             <form action="include/admLogin.php" method="post">
                 <div class="form-group">
                     <label for="logIn">Podaj login lub e-mail:</label><br>
                     <input type="text" class="col-md-2 mb-3" id="logIn" name="logIn" aria-describedby="emailHelp" placeholder="login / e-mail">
                 </div>
-
-
-
-
-
                 <div class="form-group">
                     <label class="sr-only" for="passwordIn">Podaj hasło:</label><br>
                     <input type="password" class="col-md-2 mb-3" id="passwordIn" name="passwordIn" placeholder="hasło">
@@ -50,14 +41,7 @@ include_once 'include/dbConn.php';
                 <a href="rejestracja.php">Rejestracja</a>
             </div>
         </div>
-
-
         <!--close loginForm -->
-
-
-
-
-
     <?php
 }
 // error info from ???

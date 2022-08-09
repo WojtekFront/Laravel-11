@@ -22,10 +22,19 @@ if (isset($_SESSION["userid"])) {
     if ($resultProducts = mysqli_query($conn, $sql)) {
 
         while ($row = mysqli_fetch_row($resultProducts)) {
-            echo "<tr><td>{$row[0]}</td>
-        <td>{$row[2]}</td>
-        <td>{$row[3]}</td>
-        <td>{$row[4]}</td>
+            echo "<tr>
+        <td>{$row[0]}</td> <!-- ID product -->
+        <td>{$row[2]}</td> <!-- product name -->
+        <td>{$row[10]}</td> <!-- productUnit  -->
+        <td>{$row[7]}</td> <!-- quantity  -->
+        <td>{$row[8]}</td> <!-- priceNet -->
+        <td>{$row[9]}</td> <!-- productVat -->
+        <td>{$row[11]}</td> <!-- product price gross  -->
+        <td>{$row[6]}</td> <!-- EAN --> 
+        <td style='display: none'>{$row[3]}</td> <!-- product describe -->
+        <td style='display: none'>{$row[4]}</td> <!-- status  -->
+        <td style='display: none'>{$row[5]}</td>  <!-- product removed -->
+        <td>{$row[1]}</td> <!-- product category -->
         </tr>";
         }
     }
@@ -35,7 +44,20 @@ if (isset($_SESSION["userid"])) {
 ?>
 </tbody>
 </table><!-- close mainTable  -->
-
+<!-- 
+    0 ID product
+    1 product category
+    2 product name
+    3 product describe
+    4 status
+    5 product removed
+    6 EAN
+    7 quantity
+    8 priceNet
+    9 productVat
+    10 productUnit
+    11 product price gross
+ -->
 
 <?php
 include_once 'include/incFooter.php';
