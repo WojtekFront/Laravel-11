@@ -6,6 +6,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $title = trim($_POST['productTitle']);
     $describe = trim($_POST['productDescribe']);
     $status = trim($_POST['productStatus']);
+    $categoryProduct = trim($_POST['productCategory']);
+    $unitProduct = trim($_POST['productUnit']);
+    $priceProduct = trim($_POST['productPrice']);
+    $quantityProduct = trim(($_POST['productQuantity']));
+    $productVat = trim($_POST['vatProduct']);
+    
+
+
+
 
     if (isstetData($title, $describe, $status)) {
         header("location:../editProduct.php?error=valueIncorrect");

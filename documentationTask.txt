@@ -38,6 +38,7 @@ Następna wersja 3:
 - dodanie dziennika zdarzeń;
 - dodanie notatnika;
 - lista jeżeli opis albo nazwa są dłuższe niż "X" znaków to pokazuj "..."
+- dodawanie własnego VAT do biblioteki
 
 Następna wersja 4:
 - administracja,
