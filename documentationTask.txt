@@ -23,6 +23,7 @@ Następne W-FRONT 1.1:
 
 
 Następne W-FRONT 2:
+- na liście w opisie pokazuj tylko początek opisu
 - nowy wygląd karty
 - dodanie dokumentu PZ - pobierając ID ale nie powiązanych ze stanami
 - dodanie dokumentu WZ, RW - pobierając ID ale nie powiązanych ze stanami
@@ -39,6 +40,7 @@ Następna wersja 3:
 - dodanie notatnika;
 - lista jeżeli opis albo nazwa są dłuższe niż "X" znaków to pokazuj "..."
 - dodawanie własnego VAT do biblioteki
+- dodawanie własnych kategorii
 
 Następna wersja 4:
 - administracja,

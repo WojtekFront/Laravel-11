@@ -2,7 +2,7 @@
 include_once 'include/incHeader.php';
 include_once 'include/dbConn.php';
 ?>
-<h3>Dodawanie Produktu</h3>
+<h3>Dodawanie Produktu (działająca wersja)</h3>
 <form class="editPosition" method="POST" action="include/dbInsert.php">
     <table class="mainTable">
         <tr>

@@ -40,8 +40,10 @@ function correctStatus($status)
 {
     $result;
     switch ($status) {
-        case 'niedostepny':
-        case 'dostepny':
+        case 'niedostepny': //old version
+        case 'dostepny': //old version
+        case 'widoczny':
+        case 'ukryty':
             $result = false;
             break;
         default:
