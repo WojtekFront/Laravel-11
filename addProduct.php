@@ -12,10 +12,10 @@ include_once 'include/dbConn.php';
 
         // </div>
 
- 
+        echo "<br>";
+        echo "<br>";
 
-
-
+       include_once 'include/productAdd2.php'; //use only for test 08.08.2022
         include 'include/admLog.php';
     } else {
         echo "Zaloguj się, aby mieć możliwość edycji panelu.";
