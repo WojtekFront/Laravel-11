@@ -22,5 +22,4 @@ if (isset($_GET["error"])) {
 }
 
 function remeberEvent(){
-    //
 }

@@ -4,7 +4,6 @@ include_once 'include/incHeader.php';
 include_once 'include/dbConn.php';
 ?>
 
-
 <!-- tekst powitalny -->
 <div>
     <h3>Program do zarządzania towarami <b>W-FRONT 1.1</b></h3>
@@ -14,7 +13,6 @@ include_once 'include/dbConn.php';
         <li> odjemowanie towarów,</li>
         <li> edycja towarów,</li>
         <li> wyświetlanie towarów</li>
-
     </ul>
 </div>
 <!-- logowanie -->
@@ -56,7 +54,6 @@ if (isset($_GET["error"])) {
         echo "<p> </p>";
     }
 }
-
     ?>
     </section>
     <?php

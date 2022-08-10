@@ -20,11 +20,9 @@ include_once 'include/dbConn.php';
             <button type="submit" name="submit">Zarejestruj się</button></br></br>
         </form>
 
-
         <!--zamknij div  załóż konto -->
     </div>
     <?php
-
     if (isset($_GET["error"])) {
         if ($_GET["error"] == "emptyinput") {
             echo "<p>uzupełnij dane</p>";
@@ -51,15 +49,9 @@ include_once 'include/dbConn.php';
             echo "<p> </p>";
         }
     }
-
     ?>
 </section>
-<!-- otwórz div formularz kontaktowy -->
-<div>
-    <!-- zamnkij div formularz kontaktowy -->
-</div>
 
-</div>
 <?php
 include_once 'include/incFooter.php';
 ?>

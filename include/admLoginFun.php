@@ -52,9 +52,7 @@ function uidExists($conn, $name, $email)
     }
     mysqli_stmt_bind_param($stmt, "ss", $name, $email); //s-corresponding variable has type string
     mysqli_stmt_execute($stmt);
-
     $resultData = mysqli_stmt_get_result($stmt);
-
     if ($row = mysqli_fetch_assoc($resultData)) {
         return $row;
     } else {
@@ -73,8 +71,6 @@ function createUser($conn, $name, $email, $password)
         exit();
     }
     $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
-
-
     mysqli_stmt_bind_param($stmt, "sss", $name, $email, $hashedPwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
@@ -95,16 +91,10 @@ function emptyInPutLogin($userIn, $passwordIn)
 
 function loginUser($conn, $userIn, $passwordIn)
 {
-    
-
     $uidExists = uidExists($conn, $userIn, $userIn); 
-
-
     $hash;
-
     $sql = "SELECT user_pwd FROM users WHERE user_name='$userIn'";
         if ($resultPass = mysqli_query($conn, $sql)) {
-
             while ($row = mysqli_fetch_row($resultPass)) {
                 //var_dump($row[4]);
               $hash=  $row[0];
@@ -126,4 +116,3 @@ function loginUser($conn, $userIn, $passwordIn)
         exit();
     }
 }
-

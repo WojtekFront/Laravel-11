@@ -1,84 +1,95 @@
 zadania:
 
-Aktualne(ważne/pilne) W-FRONT 1.0: 
-
-- walidacja hasła zalogowania - aktualnie przepuszcza bez danych;
-
-
-
 Następne W-FRONT 1.1:
-- dodanie nowych parametrów dla towarów
+- dodanie nowych parametrów dla dodawania towarów
 . Jednostka
 . EAN
 . Ilość
 . Cena
 . Stawka VAT
-- po dodaniu produktu komentarz o dodaniu a nie przeniesienie na stronę
 - w "productEdit" zmień "zatwierdź"
 ! nazwa strony czy jest przekazywana w górnym pasku
-! rozbicie na dodawanie i usuwanie towaru
+! rozbicie na dodawanie i usuwanie towaru //wykonane
 * aktualizacja instrukcji o opcje
 
 
+Następne W-FRONT 1.2:
+- dodać bootstrap do rejestracji,
+- przejście na klasy przy logowaniu użytkownika
 
 
-Następne W-FRONT 2:
-- na liście w opisie pokazuj tylko początek opisu
-- nowy wygląd karty
-- dodanie dokumentu PZ - pobierając ID ale nie powiązanych ze stanami
-- dodanie dokumentu WZ, RW - pobierając ID ale nie powiązanych ze stanami
-- nawbar 
-. na hamburger; (8/5); // wykonane bootstrap
-. rozbicie pól po drzewku
+Następne W-Front 1.3
+- przejście na klasy przy dodawaniu produktów,
 
 
-Następna wersja 3:
+
+Następne W-FRONT 2(edycja towarów):
+- wprowadzenie boostrap
+- wyszukiwanie produktów po innym parametrze niż ID
+. przemyślenie działania aby ograniczyć ilość wyświetlanych pozycji
+
+
+W-FRONT 2.1
+- po dodaniu produktu komentarz o dodaniu a nie przeniesienie na stronę
+
+
+
+Następna wersja 3 (lista)
 - sortowanie po lista towarów;
-- możliwość składania zamówień;
+- na liście w opisie pokazuj tylko początek opisu
 - eksport danych do pliku CSV oraz możliwość importu
-- dodanie dziennika zdarzeń;
-- dodanie notatnika;
 - lista jeżeli opis albo nazwa są dłuższe niż "X" znaków to pokazuj "..."
 - dodawanie własnego VAT do biblioteki
 - dodawanie własnych kategorii
+- poprawienie wyglądu listy
+. uzupełnienie wartości
+. nazwanie kulumn
+- SQL transaction
 
-Następna wersja 4:
+
+3.1
+- dodanie dziennika zdarzeń;
+- dodanie notatnika;
+
+
+
+Następna wersja 4.0(administracja):
 - administracja,
-- wyszukiwanie produktów po innym parametrze niż ID
-. przemyślenie działania aby ograniczyć ilość wyświetlanych pozycji
-- powiązanie PZ z dokumentami magazynowymi
 - dodawanie zdjęć do produktów
 
-Następna wersja 5:
+
+wersja 4.1:
+- navbar pozucja użytkownik
+
+
+
+Następna wersja 5(wydruki):
 - tworzenie wydruków;
 - pobieranie kursów walut;
+- dodanie dokumentu PZ - pobierając ID ale nie powiązanych ze stanami
+- dodanie dokumentu WZ, RW - pobierając ID ale nie powiązanych ze stanami
+- możliwość składania zamówień;
+- powiązanie PZ z dokumentami magazynowymi
 
 
-Następna wersja 6:
+
+
+
+
+Następna wersja X:
 - udostępnienie na stronie
-
-
-
 - poprawić form o: require, ilość znaków;
 - zaktualizować SQL,
-
-
-
-
-
-
-
-
-
-
 - poprawa wyglądu,
-. nadać wymiary tabeli,
-. komunikaty błódów w klorze,
+. nadać wymiary tabeli // wykonane bootstrap
+. komunikaty błędów w kolorze,
 - wybieranie jakie kolumny mają być widoczne na liście
 
 
 
-
+Opcjonalne:
+- walidacja boostrap 
+. https://getbootstrap.com/docs/4.1/components/forms/#validation
 
 
 * JS dodawanie albo edycja produktów
