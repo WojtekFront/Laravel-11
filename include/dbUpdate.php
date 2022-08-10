@@ -9,7 +9,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $status = trim($_POST['productStatus']);
     $deleteProduct = trim($_POST['productEdit']);
 
-
     if (isstetData($title, $describe, $status)) {
         header("location:../editProduct.php?error=valueIncorrect");
         exit();

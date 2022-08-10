@@ -9,7 +9,6 @@ if (isset($_POST["submit"])) {
     require_once 'dbConn.php';
     require_once 'admLoginFun.php';
 
-
     if (emptyInputSignup($name, $email, $password, $password2) !== false) {
         header("location: ../rejestracja.php?error=emptyinput");
         exit();

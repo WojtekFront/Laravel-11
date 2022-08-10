@@ -1,8 +1,5 @@
 <?php
 
-
-
-
 if (isset($_POST['submit'])) {
     $userIn = $_POST['logIn'];
     $passwordIn = $_POST['passwordIn'];
@@ -16,7 +13,6 @@ if (isset($_POST['submit'])) {
         header("location:../index.php?error=emtyLogField");
         exit();
     }else{ 
-
     loginUser($conn, $userIn, $passwordIn);
    }
 }else{
