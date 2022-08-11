@@ -37,3 +37,7 @@ id jest możliwe w edycji,
 2.1.4 Zakładka POMOC:
 - włączenia dokumentacji,
 
+
+--------------------
+documentationTask.txt - plik zawiera plany rozwojowe programu.
+
