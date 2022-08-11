@@ -1,6 +1,7 @@
-# Warehouse
+
+HTML, CSS, PHP, BOOTSTRAP
+
 Warehouse management software
-Użyte technologie: HTML, CSS, PHP, BOOTSTRAP
 
 Opis programu W-FRONT 1.1 data 2022-08:
 1. wstęp
