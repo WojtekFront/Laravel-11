@@ -1,7 +1,5 @@
-
-HTML, CSS, PHP, BOOTSTRAP
-
 Warehouse management software
+system magazynowy z użyciem: HTML, CSS, PHP, BOOTSTRAP
 
 Opis programu W-FRONT 1.1 data 2022-08:
 1. wstęp
