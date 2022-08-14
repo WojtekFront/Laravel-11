@@ -38,7 +38,7 @@ include_once 'include/dbConn.php';
   <div class="form-group row">
     <label for="productEAN" class="col-sm-2 col-form-label">Kod produktu/EAN:</label>
     <div class="col-sm-6 col-md-4">
-      <input type="text" class="form-control" id="productEAN" name="productEAN" placeholder="kod">
+      <input type="number" class="form-control" id="productEAN" name="productEAN" placeholder="kod">
     </div>
     <!-- <button onclick="document.getElementById('productEAN').innerHTML = getRndInteger(10000000000,100000000000)">Generuj EAN</button>
   <script>
