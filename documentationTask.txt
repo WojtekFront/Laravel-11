@@ -14,7 +14,10 @@ Aktualne W-FRONT 1.1:
 * aktualizacja instrukcji o opcje
 
 Następne W-Front 1.1:
-- wyliczanie ceny brutto na podstawie ceny netto
+- wyliczanie ceny brutto na podstawie ceny netto,
+- notatki kod ean:
+.A Kod kraju [2 cyfry] B Kod producenta [5 cyfr] C Kod pozycji asortymentowej [5 cyfr] D Cyfra kontrolna
+.generowanie EAN po kliknięciu guzika,
 
 
 Następne W-FRONT 1.2:

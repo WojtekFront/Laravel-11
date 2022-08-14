@@ -3,7 +3,23 @@ include_once 'include/incHeader.php';
 include_once 'include/dbConn.php';
 ?>
 <h3>Dodawanie Produktu <span class="badge badge-secondary">wersja beta</span></h3>
+
+
 <form class="editPosition" method="POST" action="include/dbInsert.php">
+  <!-- productID -->
+  <div class="form-group row">
+    <label for="productTitle" class="col-sm-2 col-form-label">ID towaru:</label>
+    <div class="col-sm-1 col-md-1">
+      <input class="form-control" readonly value='  <?php //id pobierane na podstawie ostatnio dodanego produktu 
+                                                    $sql = "SELECT MAX(product_id) FROM product;";
+                                                    if ($resultProducts = mysqli_query($conn, $sql)) {
+
+                                                      while ($row = mysqli_fetch_row($resultProducts)) {
+                                                        echo ($row[0] + 1);
+                                                      }
+                                                    } ?>'>
+    </div>
+  </div>
   <!-- productTitle -->
   <div class="form-group row">
     <label for="productTitle" class="col-sm-2 col-form-label">Nazwa towaru:</label>
@@ -18,13 +34,21 @@ include_once 'include/dbConn.php';
       <textarea type="text" class="form-control" id="productDescribe" name="productDescribe" placeholder="opis" rows="5"></textarea>
     </div>
   </div>
-    <!-- productEAN -->
-    <div class="form-group row">
+  <!-- productEAN -->
+  <div class="form-group row">
     <label for="productEAN" class="col-sm-2 col-form-label">Kod produktu/EAN:</label>
     <div class="col-sm-6 col-md-4">
       <input type="text" class="form-control" id="productEAN" name="productEAN" placeholder="kod">
     </div>
+    <!-- <button onclick="document.getElementById('productEAN').innerHTML = getRndInteger(10000000000,100000000000)">Generuj EAN</button>
+  <script>
+    function getRndInteger(min, max) {
+      var kodEan = Math.floor(Math.random() * (max - min)) + min;
+      return "59" + kodEan;
+    }
+  </script> -->
   </div>
+
   <!-- productStatus -->
   <div class="form-group row">
     <label for="productStatus" class="col-sm-2 col-form-label">Status produktu</label>
