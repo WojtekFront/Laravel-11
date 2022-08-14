@@ -3,14 +3,15 @@ include 'dbConn.php';
 include 'dbValidation.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $title = trim($_POST['productTitle']);
-    $describe = trim($_POST['productDescribe']);
-    $status = trim($_POST['productStatus']);
-    $categoryProduct = trim($_POST['productCategory']);
-    $unitProduct = trim($_POST['productUnit']);
-    $priceProduct = trim($_POST['productPrice']);
-    $quantityProduct = trim(($_POST['productQuantity']));
-    $productVat = trim($_POST['vatProduct']);
+    $title = trim($_POST['productTitle']); //is ok
+    $describe = trim($_POST['productDescribe']); //is ok
+    $EANproduct=trim($_POST['productEAN']);//add to form
+    $status = trim($_POST['productStatus']); // is ok
+    $categoryProduct = trim($_POST['productCategory']);//add to form
+    $unitProduct = trim($_POST['productUnit']); //add to form
+    $productPriceNet = trim($_POST['productPriceNet']); //add to form
+    $productVat = trim($_POST['vatProduct']); //add to form
+    $quantityProduct = trim(($_POST['productQuantity'])); //add to form
     
     if (isstetData($title, $describe, $status)) {
         header("location:../editProduct.php?error=valueIncorrect");
@@ -38,8 +39,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (isset($conn)) {
 
-        $sqlInsert = "INSERT INTO product( `product_category`, `product_name`, `product_describe`, `product_status`, `product_removed`) 
-VALUES ('towary','$title','$describe','$status',1)";
+        $sqlInsert = "INSERT INTO product( `product_category`, `product_name`, `product_describe`, `product_status`, `product_removed`,`product_EAN`,`product_quantity`,`product_price_net`,`product_VAT`,`product_unit`) 
+VALUES ('towary','$title','$describe','$status',1,'$EANproduct','$quantityProduct','$productPriceNet','$productVat','$unitProduct')";
 
         mysqli_query($conn, $sqlInsert);
 

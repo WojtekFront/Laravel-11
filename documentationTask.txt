@@ -1,16 +1,23 @@
 zadania:
 
-Następne W-FRONT 1.1:
+Aktualne W-FRONT 1.1:
 - dodanie nowych parametrów dla dodawania towarów
 . Jednostka
 . EAN
 . Ilość
 . Cena
 . Stawka VAT
+
 - w "productEdit" zmień "zatwierdź"
 ! nazwa strony czy jest przekazywana w górnym pasku
 ! rozbicie na dodawanie i usuwanie towaru //wykonane
 * aktualizacja instrukcji o opcje
+
+Następne W-Front 1.1:
+- wyliczanie ceny brutto na podstawie ceny netto,
+- notatki kod ean:
+.A Kod kraju [2 cyfry] B Kod producenta [5 cyfr] C Kod pozycji asortymentowej [5 cyfr] D Cyfra kontrolna
+.generowanie EAN po kliknięciu guzika,
 
 
 Następne W-FRONT 1.2:
@@ -81,9 +88,9 @@ Następna wersja X:
 - poprawić form o: require, ilość znaków;
 - zaktualizować SQL,
 - poprawa wyglądu,
-. nadać wymiary tabeli // wykonane bootstrap
 . komunikaty błędów w kolorze,
 - wybieranie jakie kolumny mają być widoczne na liście
+- wyliczanie ceny netto na podstawie ceny brutto
 
 
 
