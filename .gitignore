@@ -50,3 +50,8 @@ composer.phar
 *.code-workspace
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,composer,phpunit
+
+
+
+#testing
+test.php
