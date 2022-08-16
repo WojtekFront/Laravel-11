@@ -49,7 +49,7 @@ include_once 'include/dbConn.php';
   </div>
   <!-- productStatus -->
   <div class="form-group row">
-    <label for="productStatus" class="col-sm-2 col-form-label">Status produktu</label>
+    <label for="productStatus" class="col-sm-2 col-form-label">Status produktu:</label>
     <div class="col-sm-6 col-md-4">
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" id="productStatus" name="productStatus" value="widoczny" checked>
@@ -85,7 +85,7 @@ include_once 'include/dbConn.php';
   <div class="form-group row">
     <label for="productPriceNet" class="col-sm-2 col-form-label">Cena produktu netto:</label>
     <div class="col-sm-2 col-md-1">
-      <input type="number" class="form-control" id="productPriceNet" name="productPriceNet" placeholder="cena" step=0.01>
+      <input type="number" class="form-control" id="productPriceNet" name="productPriceNet" placeholder="cena" step=100>
     </div>
   </div>
   <!-- vatProduct -->
@@ -93,11 +93,11 @@ include_once 'include/dbConn.php';
     <label for="vatProduct" class="col-sm-2 col-form-label">Stawka VAT:</label>
     <div class="col-sm-2 col-md-1">
       <select class="form-control" id="vatProduct" name="vatProduct">
-        <option>23</option>
-        <option>8</option>
-        <option>5</option>
-        <option>0</option>
-        <option>ZW</option>
+        <option value="23">23</option>
+        <option value="8">8</option>
+        <option value="5">5</option>
+        <option value="0">0</option>
+        <option value="ZW">ZW</option>
       </select>
     </div>
   </div>
@@ -105,7 +105,7 @@ include_once 'include/dbConn.php';
  <div class="form-group row">
     <label for="productPriceGross" class="col-sm-2 col-form-label">Cena produktu brutto:</label>
     <div class="col-sm-2 col-md-1" id="test">
-      <input type="number" class="form-control" id="productPriceGross" name="productPriceGross" placeholder="cena" step=0.01  min=0>
+      <input type="number" class="form-control" id="productPriceGross" name="productPriceGross" placeholder="cena" step=0.01 min=0 readonly>
     </div>
   </div>
   <!-- productCategory -->
@@ -128,8 +128,8 @@ include_once 'include/dbConn.php';
 
 <br>
 
-<!-- <script src="../js/myScript.js"></script> -->
-<script>
+<script src="./JS/form.js"></script>
+<!-- <script>
 //price brutto
 var vatN, vatS; 
 vatS = document.getElementById(`vatProduct`).value;
@@ -152,4 +152,4 @@ function sumValue() {
 document.getElementById(`productPriceGross`).value = (Math.round(cenaLok * vatN) / 100)+parseInt(cenaLok);
 }
 document.getElementById(`productPriceNet`).addEventListener('change',sumValue);
-  </script>
+  </script> -->
