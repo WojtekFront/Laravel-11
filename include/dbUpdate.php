@@ -9,7 +9,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $status = trim($_POST['productStatus']);
     $deleteProduct = trim($_POST['productEdit']);
 
-    if (isstetData($title, $describe, $status)) {
+    $EANproduct=trim($_POST['productEAN']); //add to form - validation
+    $categoryProduct = trim($_POST['productCategory']); //add to form - validation
+    $unitProduct = trim($_POST['productUnit']); //add to form - validation
+    $productPriceNet = trim($_POST['productPriceNet']); //add to form - validation
+    $productVat = trim($_POST['vatProduct']); //is ok
+    $quantityProduct = trim(($_POST['productQuantity'])); //add to form - validation
+
+    if (isstetData($title, $describe, $status, $productUnit)) {
         header("location:../editProduct.php?error=valueIncorrect");
         exit();
     }
