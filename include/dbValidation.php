@@ -1,7 +1,8 @@
 <?php
-function isstetData($title, $describe, $status)
+// edit dbInsert
+function isstetData($title, $describe, $status, $productUnit)
 {
-    return (isset($title) && isset($describe) && isset($status)) ? false : true;
+    return (isset($title) && isset($describe) && isset($status) && isset($productUnit)) ? false : true;
 }
 
 function isNotNull($title, $describe, $status)

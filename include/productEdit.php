@@ -5,14 +5,14 @@ Podaj ID produktu do edycji:
     <select name="productId">
  
  <?php
+ //choose product to edit
     $sql = "SELECT*FROM product WHERE product_removed=1";
     if ($resultProducts = mysqli_query($conn, $sql)) {
-
         while ($row = mysqli_fetch_row($resultProducts)) {
             echo "<option value={$row[0]}>
-        {$row[0]} / 
-        {$row[2]} /  
-        {$row[3]}
+        {$row[0]} /
+        {$row[2]} /
+        {$row[3]} 
         </option>";
         }}?> 
     </select>

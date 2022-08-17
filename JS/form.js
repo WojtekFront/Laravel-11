@@ -21,3 +21,11 @@ document.getElementById(`productPriceGross`).value = (Math.round(cenaLok * vatN)
 }
 document.getElementById(`productPriceNet`).addEventListener('change',sumValue);
 document.getElementById(`vatProduct`).addEventListener('change',sumValue);
+
+/* button for generate code EAN
+ <script>
+  function getRndInteger(min, max) {
+    var kodEan = Math.floor(Math.random() * (max - min)) + min;
+    return "59" + kodEan;
+  }
+</script> --> */

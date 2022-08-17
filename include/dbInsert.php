@@ -5,15 +5,15 @@ include 'dbValidation.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $title = trim($_POST['productTitle']); //is ok
     $describe = trim($_POST['productDescribe']); //is ok
-    $EANproduct=trim($_POST['productEAN']);//add to form
+    $EANproduct=trim($_POST['productEAN']); //add to form - validation
     $status = trim($_POST['productStatus']); // is ok
-    $categoryProduct = trim($_POST['productCategory']);//add to form
-    $unitProduct = trim($_POST['productUnit']); //add to form
-    $productPriceNet = trim($_POST['productPriceNet']); //add to form
-    $productVat = trim($_POST['vatProduct']); //add to form
-    $quantityProduct = trim(($_POST['productQuantity'])); //add to form
+    $categoryProduct = trim($_POST['productCategory']); //add to form - validation
+    $unitProduct = trim($_POST['productUnit']); //add to form - validation
+    $productPriceNet = trim($_POST['productPriceNet']); //add to form - validation
+    $productVat = trim($_POST['vatProduct']); //is ok
+    $quantityProduct = trim(($_POST['productQuantity'])); //add to form - validation
     
-    if (isstetData($title, $describe, $status)) {
+    if (isstetData($title, $describe, $status, $productUnit)) {
         header("location:../editProduct.php?error=valueIncorrect");
         exit();
     }

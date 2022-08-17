@@ -79,7 +79,8 @@ Następna wersja 5(wydruki):
 - powiązanie PZ z dokumentami magazynowymi
 
 
-
+Następna wersja 6 BUG
+- 
 
 
 
