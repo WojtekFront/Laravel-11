@@ -2,7 +2,7 @@
 
 function routeToController($uri, $routes) {
     if (array_key_exists($uri, $routes)) {
-        require $routes[$uri];
+        require_once $routes[$uri];
     } else {
         abort();
     }
