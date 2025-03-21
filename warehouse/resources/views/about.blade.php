@@ -1,7 +1,7 @@
-<x-nav-link></x-nav-link>
+
 
 <x-layout>
-
-    <h1> Information about company </h1>
-
+    <x-slot-heading>
+        <h1> Information about company </h1>
+    </x-slot-text>
 </x-layout>
